@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="quiz.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="quiz-header">
+    <div class="header-container">
+      <div class="logo"><i class="fas fa-brain"></i> <span>Quiz App</span></div>
+      <div class="quiz-info">
+        <div class="timer"><i class="fas fa-clock"></i> <span id="timer-display">20:00</span></div>
+        <div class="score-display"><i class="fas fa-star"></i> Score: <span id="current-score">0</span></div>
+      </div>
+      <button class="exit-btn" id="exit-btn"><i class="fas fa-times"></i> Exit</button>
+    </div>
+  </header>
+
+  <main class="quiz-container">
+
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-spinner"></div>
+      <h2>Loading Quiz...</h2>
+      <p>Please wait while we prepare your questions</p>
+    </div>
+
+    <div id="quiz-content" class="quiz-content" style="display: none;">
+      <div class="question-card">
+        <div class="question-header">
+          <h1 id="quiz-type">Loading...</h1>
+          <div class="question-meta">
+            <span id="question-number">Question 1 of <span id="total-questions">0</span></span>
+            <div id="difficulty" class="difficulty-badge">Medium</div>
+          </div>
+        </div>
+
+        <div class="question-content">
+          <div id="question-text" class="question-text">Loading question...</div>
+        </div>
+
+        <div id="options-container" class="options-container"></div>
+
+        <div class="question-actions">
+          <div class="navigation-buttons">
+            <!-- Removed previous button -->
+            <button id="next-btn" class="nav-btn">Next <i class="fas fa-chevron-right"></i></button>
+          </div>
+          <button id="submit-btn" class="action-btn submit-btn"><i class="fas fa-check"></i> Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="results-screen" class="results-screen" style="display: none;">
+      <h1>Quiz Completed!</h1>
+      <p>Your Results</p>
+      <div class="score-section">
+        <div class="score-circle">
+          <div class="score-content">
+            <span id="final-percentage" class="percentage">0%</span>
+            <span class="score-text">Score</span>
+          </div>
+        </div>
+        <div class="score-breakdown">
+          <p>Correct: <span id="correct-answers">0</span></p>
+          <p>Incorrect: <span id="incorrect-answers">0</span></p>
+          <p>Grade: <span id="final-grade">F</span></p>
+        </div>
+      </div>
+      <div class="results-actions">
+        <button id="retake-btn" class="action-btn">Retake Quiz</button>
+        <button id="home-btn" class="action-btn">Back to Home</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
