@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster - Test Your Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-graduation-cap"></i>
+          <span>QuizMaster</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#quizzes">Quizzes</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Test Your Knowledge with <span class="highlight">QuizMaster</span></h1>
+        <p class="hero-description">
+          Challenge yourself with our comprehensive collection of quizzes covering various subjects. 
+          From programming we have something for everyone!
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Questions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Categories</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Students</span>
+          </div>
+        </div>
+        <a href="#quizzes" class="cta-button">Start Quiz Now</a>
+      </div>
+      <div class="hero-image">
+        <div class="quiz-illustration">
+          <i class="fas fa-brain"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quizzes Section -->
+  <section id="quizzes" class="quizzes-section">
+    <div class="container">
+      <h2 class="section-title">Choose Your Quiz</h2>
+      <p class="section-subtitle">Select from our variety of challenging quizzes</p>
+      
+      <div class="quiz-grid">
+        <!-- Programming Quizzes -->
+        <div class="quiz-card" data-category="programming">
+          <div class="quiz-icon">
+            <i class="fab fa-java"></i>
+          </div>
+          <h3>Java Programming</h3>
+          <p>Test your Java knowledge with object-oriented programming concepts</p>
+          <div class="quiz-meta">
+            <span><i class="fas fa-clock"></i> 20 mins</span>
+            <span><i class="fas fa-question-circle"></i> 15 questions</span>
+          </div>
+          <button class="quiz-btn" onclick="startQuiz('java')">Start Java Quiz</button>
+        </div>
+
+        <div class="quiz-card" data-category="programming">
+          <div class="quiz-icon">
+            <i class="fab fa-js-square"></i>
+          </div>
+          <h3>JavaScript Fundamentals</h3>
+          <p>Challenge yourself with JavaScript basics and advanced concepts</p>
+          <div class="quiz-meta">
+            <span><i class="fas fa-clock"></i> 20 mins</span>
+            <span><i class="fas fa-question-circle"></i> 15 questions</span>
+          </div>
+          <button class="quiz-btn" onclick="startQuiz('javascript')">Start JS Quiz</button>
+        </div>
+
+        <div class="quiz-card" data-category="programming">
+          <div class="quiz-icon">
+            <i class="fab fa-python"></i>
+          </div>
+          <h3>Python Programming</h3>
+          <p>Explore Python syntax, data structures, and algorithms</p>
+          <div class="quiz-meta">
+            <span><i class="fas fa-clock"></i> 20 mins</span>
+            <span><i class="fas fa-question-circle"></i> 15 questions</span>
+          </div>
+          <button class="quiz-btn" onclick="startQuiz('python')">Start Python Quiz</button>
+        </div>
+
+        <!-- Database -->
+        <div class="quiz-card" data-category="database">
+          <div class="quiz-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>SQL Database</h3>
+          <p>Test your database querying and management skills</p>
+          <div class="quiz-meta">
+            <span><i class="fas fa-clock"></i> 20 mins</span>
+            <span><i class="fas fa-question-circle"></i> 15 questions</span>
+          </div>
+          <button class="quiz-btn" onclick="startQuiz('sql')">Start SQL Quiz</button>
+        </div>
+      </div>
+
+      <!-- Quiz Filters -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title">About QuizMaster</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>What Makes QuizMaster Different?</h3>
+          <p class="about-description">
+            QuizMaster stands out from other quiz platforms by offering a unique, comprehensive learning experience 
+            designed specifically for students and professionals looking to enhance their knowledge and skills.
+          </p>
+          
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon-small">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="feature-content">
+                <h4>Adaptive Learning</h4>
+                <p>Our intelligent system adapts to your learning pace and provides personalized quiz recommendations based on your performance and interests.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              
+              <div class="feature-icon-small">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="feature-content">
+                <h4>Programming Focus</h4>
+                <p>Unlike generic quiz platforms, we specialize in programming languages and technical skills, with hands-on coding challenges and real-world scenarios.</p>
+              </div>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon-small">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="feature-content">
+                <h4>Cross-Platform</h4>
+                <p>Access your quizzes anywhere, anytime with our responsive design that works seamlessly across all devices and platforms.</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>500+</h3>
+            <p>Curated Questions</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>98%</h3>
+            <p>Satisfaction Rate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container"
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-inline">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <span>Email: <a href="mailto:sa15076332@gmail.com">sa15076332@gmail.com</a></span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <span>Response Time: Usually within 24 hours</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-share-alt"></i>
+              </div>
+              <span>Social Media: 
+                <a href="https://x.com/sabir_7634" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100053296817339" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://linkedin.com/in/sabir-ansari-68124a253" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/sabir_032" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>QuizMaster</span>
+          </div>
+          <p>Empowering learners through interactive quizzes and challenges.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#quizzes">Quizzes</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href=https://x.com/sabir_7634  target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href=https://www.facebook.com/profile.php?id=100053296817339 target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href=https://linkedin.com/in/sabir-ansari-68124a253   target="_blank"/><i class="fab fa-linkedin"></i></a>
+            <a href=https://www.instagram.com/sabir_032    target="_blank"/><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 QuizMaster. All rights reserved.</p>
+        <p></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
