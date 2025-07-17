@@ -1,7 +1,5 @@
 package com.sabir.quizApp.controller;
 import com.sabir.quizApp.model.QuestionWrapper;
-import com.sabir.quizApp.model.Response;
-import com.sabir.quizApp.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

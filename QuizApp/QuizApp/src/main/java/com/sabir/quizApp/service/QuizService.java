@@ -4,8 +4,6 @@ import com.sabir.quizApp.dao.QuestionDAO;
 import com.sabir.quizApp.dao.QuizDao;
 import com.sabir.quizApp.model.Question;
 import com.sabir.quizApp.model.QuestionWrapper;
-import com.sabir.quizApp.model.Quiz;
-import com.sabir.quizApp.model.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
