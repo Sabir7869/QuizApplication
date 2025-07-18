@@ -16,7 +16,7 @@ public class QuestionController {
     @Autowired
     private QuestionService questionService;
 
-    @GetMapping("/all") // Renamed for better readability
+    @GetMapping("/all")
     public List<Question> getAllQuestions() {
         return questionService.getAllQuestion().getBody();
     }
@@ -27,7 +27,7 @@ public class QuestionController {
     }
     @PostMapping("/add")
     public ResponseEntity<String> addQuestion(@RequestBody Question question) {
-        return questionService.addQuestion(question);
+        return questionService.addQuestion(question); 
     }
 
     @GetMapping("/totalCount")
