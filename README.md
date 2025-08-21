@@ -44,4 +44,8 @@ QuizApplication/
 <img width="3194" height="1845" alt="Screenshot 2025-08-21 093609" src="https://github.com/user-attachments/assets/fe1a4b74-69a4-42cd-81bb-aacc47b46c9b" />
 
 
+# Question-Set-pdf-(Java,SQL,Python,JS)
+ Quiz[QuizQuestionSet.pdf](https://github.com/user-attachments/files/21910745/QuizQuestionSet.pdf)
+ 
+
 
